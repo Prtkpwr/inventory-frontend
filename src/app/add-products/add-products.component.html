@@ -1,0 +1,8 @@
+<div class="container text-center mybutton">
+  <input placeholder="Enter Product Name" [(ngModel)]="product" type="text" name="product" id="product">
+  <input placeholder="Enter Product Quantity" [(ngModel)]="quantity" type="number" name="quantity" id="quantity">
+  <button class="btn btn-default" (click)="createProduct()">Add Product</button>
+</div>
+<div class="text-center mybutton">
+  <button class="btn btn-info btn-lg" [routerLink]="['/inventory']">Go to Inventory</button>
+</div>

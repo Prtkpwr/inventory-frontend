@@ -1,0 +1,18 @@
+<div class="container">
+    <table>
+        <tr>
+          <th>Product</th>
+          <th>In Stock</th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor="let product of data">
+          <td>{{product.product}}</td>
+          <td>{{product.quantity}}</td>
+          <td></td>
+        </tr>
+    </table>
+</div>
+<div class="text-center mybutton">
+    <button class="btn btn-info btn-lg" [routerLink]="['/inventory']">Go to Inventory Page</button>
+    <button class="btn btn-info btn-lg" [routerLink]="['/add_product']">Go to Add Product Page</button>
+</div>
