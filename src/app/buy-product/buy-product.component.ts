@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 import { HttpService } from '../services/http.service';
 
@@ -10,7 +10,9 @@ import { HttpService } from '../services/http.service';
 export class BuyProductComponent implements OnInit {
 
   constructor(private appService: HttpService, private _route: ActivatedRoute, private route: Router) { }
+  public $:any;
   public data:any = [];
+  public buyShow = true;
   ngOnInit() {
     this.getAllProducts()
   }
@@ -39,5 +41,12 @@ export class BuyProductComponent implements OnInit {
     console.log(item.value)
     console.log(item.id)
 
+  }
+  ngAfterViewChecked() {
+    
+  }
+
+  public buyButtonFun(item){
+      console.log(item)
   }
 }

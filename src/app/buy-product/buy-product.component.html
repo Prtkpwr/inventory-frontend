@@ -2,7 +2,7 @@
     <table>
         <tr>
           <th>Product</th>
-          <th>In Stock</th>
+          <th>Quantity</th>
           <th>Action</th>
         </tr>
         <tr *ngFor="let product of data">
@@ -11,6 +11,10 @@
               <select class="form-control" [id]="product._id" (change)="changeValue($event.target)">
                 <option [value]="item" *ngFor="let item of createRange(product.quantity)">{{item}}</option>
               </select>
+          </td>
+          <td>
+              <button  (click)="buyButtonFun(product._id)" class="btn btn-success">Buy</button>
+              <button  (click)="cancelButtonFun(product._id)" class="btn btn-danger">Cancel</button>
           </td>
         </tr>
     </table>
