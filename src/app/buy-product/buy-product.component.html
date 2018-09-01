@@ -7,8 +7,11 @@
         </tr>
         <tr *ngFor="let product of data">
           <td>{{product.product}}</td>
-          <td>{{product.quantity}}</td>
-          <td></td>
+          <td>
+              <select class="form-control" [id]="product._id" (change)="changeValue($event.target)">
+                <option [value]="item" *ngFor="let item of createRange(product.quantity)">{{item}}</option>
+              </select>
+          </td>
         </tr>
     </table>
 </div>

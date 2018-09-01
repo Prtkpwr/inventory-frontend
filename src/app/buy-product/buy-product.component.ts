@@ -27,4 +27,17 @@ export class BuyProductComponent implements OnInit {
 
       })
   }
+  public createRange(number){
+    let items: number[] = [];
+    for(var i = 1; i <= number; i++){
+       items.push(i);
+    }
+    return items;
+  }
+
+  public changeValue(item){
+    console.log(item.value)
+    console.log(item.id)
+
+  }
 }

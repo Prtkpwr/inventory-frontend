@@ -1,6 +1,12 @@
 <div class="container text-center mybutton">
-  <input placeholder="Enter Product Name" [(ngModel)]="product" type="text" name="product" id="product">
-  <input placeholder="Enter Product Quantity" [(ngModel)]="quantity" type="number" name="quantity" id="quantity">
+  <div class="row">
+    <div class="form-group col-md-6">
+      <input class="form-control" placeholder="Enter Product Name" [(ngModel)]="product" type="text" name="product" id="product">
+    </div>
+    <div class="form-group col-md-6">
+      <input class="form-control" placeholder="Enter Product Quantity" [(ngModel)]="quantity" type="number" name="quantity" id="quantity">
+    </div>
+  </div>
   <button class="btn btn-default" (click)="createProduct()">Add Product</button>
 </div>
 <div class="text-center mybutton">
